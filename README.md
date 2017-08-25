@@ -5,7 +5,9 @@ as documented in [RFC 1952](https://tools.ietf.org/rfc/rfc1952.txt).
 
 # Installation
 
-[nom-gzip](https://github.com/Geal/nom) is available on [crates.io](https://crates.io/crates/nom-gzip) and can be used in your project by adding the following to your `Cargo.toml` file:
+[nom-gzip](https://github.com/Geal/nom) is available on
+[crates.io](https://crates.io/crates/nom-gzip) and can be used in your
+project by adding the following to your `Cargo.toml` file:
 
     [dependencies]
     nom-gzip = "0.1.0"
