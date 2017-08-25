@@ -1,0 +1,16 @@
+[package]
+name        = "nom-gzip"
+description = "nom parser for the GZIP file format"
+version     = "0.1.0"
+authors     = ["NDH <nharward@users.noreply.github.com>"]
+license     = "MIT"
+repository  = "https://github.com/nharward/nom-gzip"
+readme      = "README.md"
+keywords    = ["parser", "nom", "gzip"]
+categories  = ["compression", "encoding", "parser-implementations", "parsing"]
+
+[dependencies]
+nom = "^3.2"
+
+[dev-dependencies]
+byteorder = "^1"
