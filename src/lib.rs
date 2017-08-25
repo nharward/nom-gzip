@@ -1,24 +1,3 @@
-//! [nom](https://docs.rs/nom/3.2.0/nom/) parser for the GZIP file format, as documented in [RFC
-//! 1952](https://tools.ietf.org/rfc/rfc1952.txt).
-//!
-//! # Notes on this parser
-//!
-//! ## TL;DR
-//!
-//! This parser assumes the GZIP data contains only a single compressed file that goes until EOF.
-//!
-//! ## Details
-//!
-//! While in theory multiple files can be in a single GZIP stream by simply concatenating multiple
-//! GZIP files together (see [section 2.2](https://tools.ietf.org/html/rfc1952#page-5]) of the RFC),
-//! in practice it appears that at least the GZIP and 7z utilities (in Linux) do not correctly
-//! support this. For two files cat'd together they both report the header of the first file with
-//! the footer (uncompressed size of the file) from the second. Decompression of such a file
-//! with the gzip utility results in the uncompressed contents of both files concatenated together
-//! in a single file instead of two files with separated content. IMHO if this feature of the GZIP
-//! format can't be used in any practical sense there is no point in spending time writing a
-//! theoretically correct but far more involved (and slower!) parser here.
-
 pub mod types;
 use types::*;
 
